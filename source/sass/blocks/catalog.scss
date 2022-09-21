@@ -1,0 +1,148 @@
+.catalog {
+  padding: calc(33px + (65 - 33) * ((100vw - 1024px) / (1920 - 1024))) 0 calc(77px + (140 - 77) * ((100vw - 1024px) / (1920 - 1024)));
+  background-color: $color-default-black;
+
+  @include vp-1023 {
+    padding: 55px 0 75px;
+  }
+
+  @include vp-767 {
+    padding: 48px 0 86px;
+  }
+}
+
+.catalog__title {
+  margin: 0 0 calc(28px + (54 - 28) * ((100vw - 1024px) / (1920 - 1024))) 0;
+  font-family: $ff-second;
+  font-weight: 400;
+  font-size: calc(20px + (36 - 20) * ((100vw - 1024px) / (1920 - 1024)));
+  line-height: calc(28px + (51 - 28) * ((100vw - 1024px) / (1920 - 1024)));
+  color: $color-default-white;
+
+  &--for-mobile {
+    display: none;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 38px;
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  @include vp-767 {
+    &--for-desktop {
+      display: none;
+    }
+
+    &--for-mobile {
+      display: block;
+      margin-bottom: 28px;
+      font-size: 28px;
+      line-height: 39px;
+    }
+  }
+}
+
+.catalog ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: calc(16px + (30 - 16) * ((100vw - 1024px) / (1920 - 1024)));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1023 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.catalog a {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  @include vp-1023 {
+    align-self: flex-start;
+  }
+
+  &:focus {
+    border: 3px solid $color-default-black;
+  }
+}
+
+.catalog li {
+  width: 28.7%;
+  position: relative;
+  overflow: auto;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(32px + (60 - 32) * ((100vw - 1024px) / (1920 - 1024)));
+    height: calc(32px + (60 - 32) * ((100vw - 1024px) / (1920 - 1024)));
+    background-image: url("../img/svg/icon-card.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+
+    @include vp-1023 {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.catalog h3 {
+  position: absolute;
+  width: calc(123px + (230 - 123) * ((100vw - 1024px) / (1920 - 1024)));
+  top: calc(27px + (46 - 27) * ((100vw - 1024px) / (1920 - 1024)));
+  left: calc(21px + (44 - 21) * ((100vw - 1024px) / (1920 - 1024)));
+  margin: 0;
+  font-family: $ff-second;
+  font-weight: 400;
+  font-size: calc(12px + (20 - 12) * ((100vw - 1024px) / (1920 - 1024)));
+  line-height: calc(18px + (30 - 18) * ((100vw - 1024px) / (1920 - 1024)));
+  color: $color-default-white;
+
+  @include vp-1023 {
+    top: 37px;
+    left: 45px;
+    width: 80%;
+    height: 80%;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @include vp-767 {
+    top: 28px;
+    left: 30px;
+    font-size: 18px;
+  }
+}
+
+
+.catalog img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+}

@@ -1,30 +1,132 @@
 .btn {
   display: inline-flex;
-  margin: 10px 0;
-  padding: 10px 20px;
+  justify-content: center;
+  align-self: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 
-  color: $color-default-white;
+  font-family: $ff-second;
+  font-weight: 700;
+  font-size: calc(10px + (14 - 10) * ((100vw - 1024px) / (1920 - 1024)));
+  line-height: calc(12px + (16 - 12) * ((100vw - 1024px) / (1920 - 1024)));
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.05em;
 
-  background-color: $color-neon-blue;
+  color: $color-grey;
+
+  background-color: transparent;
   border: none;
   cursor: pointer;
+  user-select: none;
 
-  transition: opacity $trans-default;
+  &--header {
+    flex-shrink: 2;
+    margin-right: calc(32px + (56 - 32) * ((100vw - 1024px) / (1920 - 1024)));
+    padding: calc(5px + (10 - 5) * ((100vw - 1024px) / (1920 - 1024))) calc(5px + (16 - 5) * ((100vw - 1024px) / (1920 - 1024)));
+    font-size: calc(10px + (14 - 10) * ((100vw - 1024px) / (1920 - 1024)));
+    border: 1px solid  $color-grey;
+    border-radius: 3px;
 
-  &--red {
-    background-color: $color-torch-red;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
-  }
-
-  @media (hover: hover), screen and (min-width: 0\0) {
-    &:hover,
-    &:focus {
-      opacity: 0.8;
+    @include vp-1023 {
+      display: none;
+      margin-right: 60px;
+      padding: 10px 16px;
     }
+  }
+
+  &--main {
+    margin-bottom: calc(150px + (280 - 150) * ((100vw - 1024px) / (1920 - 1024)));
+    padding: calc(9px + (17 - 9) * ((100vw - 1024px) / (1920 - 1024))) calc(14px + (27 - 14) * ((100vw - 1024px) / (1920 - 1024)));
+    font-size: calc(9px + (18 - 9) * ((100vw - 1024px) / (1920 - 1024)));
+    line-height: calc(11px + (21 - 11) * ((100vw - 1024px) / (1920 - 1024)));
+    background-color: $color-blue;
+    border-radius: 3px;
+
+    @include vp-1023 {
+      margin-left: 45px;
+      margin-bottom: 206px;
+      padding: 17px 27px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    @include vp-767 {
+      margin: 0;
+    }
+  }
+
+  &--main-small {
+    display: none;
+
+    @include vp-767 {
+      display: inline-flex;
+      width: 100%;
+      padding: 12px 27px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &--main-large {
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &--description {
+    align-self: start;
+    margin-top: auto;
+    margin-bottom: calc(12px + (22 - 12) * ((100vw - 1024px) / (1920 - 1024)));
+    padding: calc(8px + (14 - 8) * ((100vw - 1024px) / (1920 - 1024))) calc(27px + (50 - 27) * ((100vw - 1024px) / (1920 - 1024)));
+    border: 1px solid $color-blue;
+    border-radius: 3px;
+    color: $color-blue;
+
+    @include vp-1023 {
+      margin-bottom: 0;
+      padding: 14px 50px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include vp-767 {
+      padding: 8px 40px;
+    }
+  }
+
+  &--form {
+    width: 45.5%;
+    padding: calc(7px + (13 - 7) * ((100vw - 1024px) / (1920 - 1024))) 0;
+    font-size: calc(12px + (16 - 12) * ((100vw - 1024px) / (1920 - 1024)));
+    line-height: 19px;
+    background-color: $color-default-black;
+    color: $color-default-white;
+    border-radius: 3px;
+
+    @include vp-1023 {
+      width: auto;
+      margin-top: -8px;
+      padding: 13px 69px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      margin-bottom: 22px;
+    }
+  }
+
+  &--modal-form {
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 13px;
+    font-size: 16px;
+    line-height: 19px;
+    background-color: $color-default-black;
+    color: $color-default-white;
+    border-radius: 3px;
   }
 }

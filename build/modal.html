@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Описание проекта">
+    <title>ProjectName</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header>
+      <div class="header__bar">
+        <div class="header__container container">
+          <a class="header__logo">
+            <p class="visually-hidden">Логотип компании Smart Device</p>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="modal__wrapper modal__wrapper--nojs">
+        <div class="modal__overlay" data-close-modal></div>
+        <form class="modal__content form-modal" action="https://echo.htmlacademy.ru" method="post">
+          <h2>Закaжите звонок</h2>
+          <p class="form-modal__text">Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+          <div class="form-modal__fields">
+            <p class="form-modal__field">
+              <label class="visually-hidden" for="modal-name">Ваше имя</label>
+              <input class="form-modal__name" type="text" id="modal-name" name="name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЕё0-9\-\s]{1,19}" required autofocus>
+            </p>
+            <p class="form-modal__field">
+              <label class="visually-hidden" for="modal-phone">Ваш телефон</label>
+              <input type="tel" id="modal-phone" name="phone" placeholder="Телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{0,}\)?[\- ]?)?[\d\- ]{0,}$" required>
+            </p>
+            <p class="form-modal__field form-modal__field--question">
+              <label class="visually-hidden" for="modal-text">Ваш вопрос</label>
+              <textarea name="text" id="modal-text" cols="30" rows="5" placeholder="Ваш вопрос"></textarea>
+            </p>
+            <p class="form-modal__field form-modal__field--checkbox">
+              <input class="visually-hidden" type="checkbox" id="modal-agreement" name="agreement" value="1" checked required>
+              <label for="modal-agreement">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+            </p>
+            <button class="btn btn--modal-form" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="container"></div>
+    </footer>
+  </body>
+</html>

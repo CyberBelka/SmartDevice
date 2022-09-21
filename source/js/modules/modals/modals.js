@@ -167,7 +167,6 @@ export class Modals {
     setTimeout(() => {
       this._addListeners(modal);
       this._autoPlay(modal);
-      document.addEventListener('click', this._documentClickHandler);
     }, this._eventTimeout);
   }
 

@@ -1,0 +1,165 @@
+.form-modal {
+  position: relative;
+}
+
+.modal__close-btn {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+}
+
+.form-modal h2 {
+  margin: 0;
+  margin-bottom: 3px;
+  font-family: $ff-second;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.form-modal__text {
+  width: 96%;
+  margin: 0;
+  margin-bottom: 40px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.form-modal__fields {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-modal__field {
+  margin: 0;
+  margin-bottom: 20px;
+
+  &--question {
+    width: 100%;
+  }
+
+  &--checkbox {
+    position: relative;
+    order: 1;
+    display: flex;
+    margin: 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.form-modal__field label {
+  padding-left: 33px;
+  color: $color-default-white;
+}
+
+.form-modal__field input {
+  width: 100%;
+  padding: 14px 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: $color-form;
+  border: none;
+
+  &::placeholder {
+    font-family: $ff-default;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default-white;
+  }
+}
+
+.form-modal__field--checkbox input + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 7px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-default-white;
+  background-color: transparent;
+}
+
+.form-modal__field--checkbox input:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 7px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-default-white;
+  background-color: transparent;
+  background-image: url("../img/svg/check.svg");
+  background-repeat: no-repeat;
+  background-size: 7px 4px;
+  background-position: center;
+}
+
+.form-modal__field--checkbox input:focus + label::before {
+  border: 2px solid $color-default-white;
+}
+
+.form-modal__field--checkbox input {
+  width: 15px;
+  height: 15px;
+}
+
+.form-modal__field--checkbox label {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form-modal__field textarea {
+  width: 100%;
+  height: 155px;
+  padding: 22px 15px;
+  font-family: $ff-default;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-black;
+  background-color: $color-form;
+  border: none;
+
+  &::placeholder {
+    font-family: $ff-default;
+    font-weight: 400;
+    font-size: calc(12px + (16 - 12) * ((100vw - 1024px) / (1920 - 1024)));
+    line-height: calc(16px + (22 - 16) * ((100vw - 1024px) / (1920 - 1024)));
+    color: $color-default-white;
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

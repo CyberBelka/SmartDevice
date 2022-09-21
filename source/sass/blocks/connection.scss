@@ -1,0 +1,52 @@
+.connection {
+  position: relative;
+  padding: calc(88px + (165 - 88) * ((100vw - 1024px) / (1920 - 1024))) 0 calc(132px + (248 - 132) * ((100vw - 1024px) / (1920 - 1024)));
+  background: $color-blue;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: $gradient-form;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  @include vp-1023 {
+    padding: 45px 0 108px;
+  }
+
+  @include vp-767 {
+    padding: 48px 0 88px;
+  }
+}
+
+.connection__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9%;
+
+  @include vp-1023 {
+    display: block;
+  }
+}
+
+.connection__image {
+  width: 42%;
+  z-index: 2;
+  align-self: flex-start;
+  margin-top: 82px;
+  user-select: none;
+
+  @include vp-1023 {
+    display: none;
+    width: 510px;
+    margin-top: 26px;
+  }
+}

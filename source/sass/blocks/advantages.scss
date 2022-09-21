@@ -1,0 +1,120 @@
+.advantages {
+  padding-top: calc(64px + (120 - 64) * ((100vw - 1024px) / (1920 - 1024)));
+  padding-bottom: calc(64px + (118 - 64) * ((100vw - 1024px) / (1920 - 1024)));
+
+  @include vp-1023 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include vp-767 {
+    padding-top: 50px;
+    padding-bottom: 52px;
+  }
+}
+
+.advantages ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(17px + (32 - 17) * ((100vw - 1024px) / (1920 - 1024)));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1023 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.advantages__item {
+  min-height: calc(160px + (300 - 160) * ((100vw - 1024px) / (1920 - 1024)));
+  padding: calc(21px + (40 - 21) * ((100vw - 1024px) / (1920 - 1024))) calc(23px + (44 - 23) * ((100vw - 1024px) / (1920 - 1024)));
+  border: 1px solid $color-advantages;
+  border-left: 5px solid $color-blue;
+
+  @include vp-1023 {
+    min-height: 360px;
+    padding: 40px 40px 0;
+  }
+
+  @include vp-767 {
+    min-height: 340px;
+    padding: 29px 25px;
+  }
+
+  &:hover {
+    background-color: $color-blue;
+  }
+
+  &--small {
+    @include vp-767 {
+      min-height: 325px;
+    }
+  }
+}
+
+.advantages__item:hover h3,
+.advantages__item:hover p,
+.advantages__item:hover svg {
+  color: $color-grey;
+}
+
+.advantages svg {
+  width: calc(19px + (35 - 19) * ((100vw - 1024px) / (1920 - 1024)));
+  height: calc(19px + (35 - 19) * ((100vw - 1024px) / (1920 - 1024)));
+  margin-bottom: calc(12px + (22 - 12) * ((100vw - 1024px) / (1920 - 1024)));
+  color: $color-blue;
+
+  @include vp-1023 {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 9px;
+  }
+
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 11px;
+  }
+}
+
+.advantages h3 {
+  margin: 0 0 calc(10px + (19 - 10) * ((100vw - 1024px) / (1920 - 1024))) 0;
+  font-family: $ff-second;
+  font-weight: 400;
+  font-size: calc(20px + (24 - 20) * ((100vw - 1024px) / (1920 - 1024)));
+  color: $color-blue;
+
+  @include vp-1023 {
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.advantages p {
+  margin: 0;
+  font-size: calc(12px + (16 - 12) * ((100vw - 1024px) / (1920 - 1024)));
+  line-height: calc(16px + (22 - 16) * ((100vw - 1024px) / (1920 - 1024)));
+
+  @include vp-1023 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
