@@ -635,6 +635,13 @@ button,
   transition: none !important;
 }
 
+.menu-opened {
+  position: fixed;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   max-width: 1920px;
